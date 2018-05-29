@@ -1,0 +1,545 @@
+{
+	"info": {
+		"_postman_id": "e1b4dc54-8c74-418b-92b5-417b0bcfb550",
+		"name": "Yaf API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "注册",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "guaosi1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pwd",
+							"value": "gx624249423",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": "yaf.com/user/reg"
+			},
+			"response": []
+		},
+		{
+			"name": "登陆",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "guaosi",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "pwd",
+							"value": "gx624249423",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "yaf.com/user/login?submit=1",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增文章",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "你好你好",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "contents",
+							"value": "你好你好你好你好",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "guaosi",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cate",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "artId",
+							"value": "15",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "yaf.com/art/add?submit=1",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"art",
+						"add"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改文章",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "不错",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "contents",
+							"value": "不错不错",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "guaosi",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cate",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "artId",
+							"value": "15",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "yaf.com/art/edit?submit=1&artId=15",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"art",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "1"
+						},
+						{
+							"key": "artId",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除文章",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "yaf.com/art/del?artId=17",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"art",
+						"del"
+					],
+					"query": [
+						{
+							"key": "artId",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新文章状态",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "yaf.com/art/status?artId=20&status=online",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"art",
+						"status"
+					],
+					"query": [
+						{
+							"key": "artId",
+							"value": "20"
+						},
+						{
+							"key": "status",
+							"value": "online"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "分页查询文章",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "yaf.com/art/list?status=offline&pagesize=2&pageno=2",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"art",
+						"list"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "offline"
+						},
+						{
+							"key": "pagesize",
+							"value": "2"
+						},
+						{
+							"key": "pageno",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "发送邮件",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uid",
+							"value": "7",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "这是一份测试邮件",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "contents",
+							"value": "<b>我是邮件我是邮件</b>哈哈哈",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "yaf.com/mail/send?submit=1",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"mail",
+						"send"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "发送短信",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uid",
+							"value": "7",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "templateId",
+							"value": "100000",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "yaf.com/sms/send?submit=1",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"sms",
+						"send"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "推送单体",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "cid",
+							"value": "43a4a104268c6f1055437eb1af01bc28",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "contents",
+							"value": "这是一个单体推送",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "yaf.com/push/single?submit=1",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"push",
+						"single"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "群体推送",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "contents",
+						"value": "这是一个群体推送",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "contents",
+							"value": "这是一个群体推送",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "yaf.com/push/toall?submit=1",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"push",
+						"toall"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ip查询接口",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "yaf.com/ip/get?ip=118.28.8.8",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"ip",
+						"get"
+					],
+					"query": [
+						{
+							"key": "ip",
+							"value": "118.28.8.8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "微信创建订单",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "yaf.com/wxpay/createbill?itemid=1",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"wxpay",
+						"createbill"
+					],
+					"query": [
+						{
+							"key": "itemid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "微信创建二维码",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "yaf.com/wxpay/qrcode?billid=10",
+					"host": [
+						"yaf",
+						"com"
+					],
+					"path": [
+						"wxpay",
+						"qrcode"
+					],
+					"query": [
+						{
+							"key": "billid",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
